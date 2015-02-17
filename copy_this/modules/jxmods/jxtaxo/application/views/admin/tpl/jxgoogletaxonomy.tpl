@@ -20,7 +20,7 @@
 
 <body>
 <div class="center" style="height:100%;">
-    <h1><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_2013_Google.png/320px-Logo_2013_Google.png" style="height:32px;width:auto;position:relative;top:10px;" />&nbsp;[{ oxmultilang ident="JXTAXO_TITLE" }]</h1>
+    <h1><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_2013_Google.png/320px-Logo_2013_Google.png" style="height:32px;width:auto;position:relative;top:10px;" />&nbsp;[{ oxmultilang ident="JXGTAXO_TITLE" }]</h1>
     <div style="position:absolute;top:4px;right:8px;color:gray;font-size:0.9em;border:1px solid gray;border-radius:3px;">&nbsp;[{$sModuleId}]&nbsp;[{$sModuleVersion}]&nbsp;</div>
     
     [{*<p>*}]
@@ -72,7 +72,7 @@
                             <td class="listfilter" style="[{$headStyle}]"><div class="r1"><div class="b1"> </div></div></td>
                             <td class="listfilter" style="[{$headStyle}]"><div class="r1"><div class="b1">[{ oxmultilang ident="GENERAL_CATEGORY" }]</div></div></td>
                             <td class="listfilter" style="[{$headStyle}]"><div class="r1"><div class="b1"> </div></div></td>
-                            <td class="listfilter" style="[{$headStyle}]"><div class="r1"><div class="b1">[{ oxmultilang ident="JXTAXO_TAXOEDITHERE" }]</div></div></td>
+                            <td class="listfilter" style="[{$headStyle}]"><div class="r1"><div class="b1">[{ oxmultilang ident="JXGTAXO_TAXOEDITHERE" }]</div></div></td>
                         </tr>
                         
                 [{foreach name=rows item=category from=$aCategories}]

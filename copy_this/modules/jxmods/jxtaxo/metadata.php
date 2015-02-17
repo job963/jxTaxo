@@ -10,10 +10,10 @@ $sMetadataVersion = '1.1';
  */
 $aModule = array(
     'id'           => 'jxtaxo',
-    'title'        => 'jxTaxo -Product Taxonomy for Shopping Portals',
+    'title'        => 'jxTaxo - Product Taxonomy for Shopping Portals',
     'description'  => array(
-                        'de' => 'Definition der Google Produkt Taxonomie je Kategorie',
-                        'en' => 'Define the Google Product Taxonomy for each Category'
+                        'de' => 'Definition der Taxonomie/Klassifizierung je Kategorie f&uum;r Preissuchmaschinen wie Google Shopping oder Amazon Produktanzeigen',
+                        'en' => 'Define the Taxonomy/Classification of each Category for Shopping Portals like Google Shopping or Amazon Product Ads'
                         ),
     'thumbnail'    => 'jxtaxo.png',
     'version'      => '0.2',
