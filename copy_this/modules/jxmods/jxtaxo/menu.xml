@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<OX>
+    <OXMENU id="NAVIGATION_ESHOPADMIN">
+        <MAINMENU id="mxjxexport">
+            <SUBMENU id="jxataxo_menu" cl="jxamazoncategory" rights="malladmin">
+            </SUBMENU>
+            <SUBMENU id="jxgtaxo_menu" cl="jxgoogletaxonomy" rights="malladmin">
+            </SUBMENU>
+        </MAINMENU>
+    </OXMENU>
+</OX>

@@ -1,0 +1,28 @@
+/* jxTaxo CSS */
+#liste td.hidden {
+    background-image: url(bg/ico_hidden.png);
+    min-width: 17px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#liste tr:hover td{
+    background-color: #e0e0e0;
+}
+
+.flatInput {
+    padding-left: 4px;
+    border: 1px solid transparent;
+    width: 99%;
+    background-color: transparent;
+}
+
+.flatInput:hover {
+    border: 1px solid #a0a0a0;
+    background-color: #ffffff;
+}
+
+.flatInput:focus {
+    background-color: #ffffff;
+    box-shadow: 0 0 3px #0000ff;
+}
