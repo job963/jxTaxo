@@ -6,6 +6,8 @@
             </SUBMENU>
             <SUBMENU id="jxgtaxo_menu" cl="jxgoogletaxonomy" rights="malladmin">
             </SUBMENU>
+            <SUBMENU id="jxntaxo_menu" cl="jxnextagcategory" rights="malladmin">
+            </SUBMENU>
         </MAINMENU>
     </OXMENU>
 </OX>

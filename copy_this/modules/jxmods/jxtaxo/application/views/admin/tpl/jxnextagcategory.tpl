@@ -20,7 +20,7 @@
 
 <body>
 <div class="center" style="height:100%;">
-    <h1><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Amazon.com-Logo.svg/320px-Amazon.com-Logo.svg.png" style="height:32px;width:auto;position:relative;top:13px;" />&nbsp;[{ oxmultilang ident="JXATAXO_TITLE" }]</h1>
+    <h1><img src="http://upload.wikimedia.org/wikipedia/commons/e/e7/LogoNexTag.png" style="height:32px;width:auto;position:relative;top:13px;" />&nbsp;[{ oxmultilang ident="JXATAXO_TITLE" }]</h1>
     <div style="position:absolute;top:4px;right:8px;color:gray;font-size:0.9em;border:1px solid gray;border-radius:3px;">&nbsp;[{$sModuleId}]&nbsp;[{$sModuleVersion}]&nbsp;</div>
     
     [{*<p>*}]
@@ -40,7 +40,7 @@
                 <input type="hidden" name="oxid" value="[{ $oxid }]">
                 
                 <input type="submit"
-                    onClick="document.forms['jxgtaxo'].elements['fnc'].value = 'saveAmazonCategoryValues';" 
+                    onClick="document.forms['jxgtaxo'].elements['fnc'].value = 'saveNextagCategoryValues';" 
                     value=" [{ oxmultilang ident="GENERAL_SAVE" }] " [{ $readonly }]>
 
                 <div style="text-align:right;margin-right:1%;float:right;">
@@ -93,7 +93,7 @@
                 </table>
                 </div>
                 <input type="submit"
-                    onClick="document.forms['jxgtaxo'].elements['fnc'].value = 'saveAmazonCategoryValues';" 
+                    onClick="document.forms['jxgtaxo'].elements['fnc'].value = 'saveNextagCategoryValues';" 
                     value=" [{ oxmultilang ident="GENERAL_SAVE" }] " [{ $readonly }]>
             </form>
         </div>

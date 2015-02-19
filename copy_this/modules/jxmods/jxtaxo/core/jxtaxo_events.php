@@ -28,7 +28,7 @@ class jxTaxo_Events
         $oDb = oxDb::getDb(); 
         
         $sLogPath = oxRegistry::get("oxConfig")->getConfigParam("sShopDir") . '/log/';
-        $fh = fopen($sLogPath.'jxmods.log',"a+");
+        $fh = fopen( $sLogPath.'jxmods.log', "a+" );
 
         $aSql = array();
         $aSql[] = array(
@@ -38,6 +38,10 @@ class jxTaxo_Events
         $aSql[] = array(
                     "field"     => "JXAMAZONCATEGORY",
                     "statement" => "ALTER TABLE oxcategories ADD COLUMN `JXAMAZONCATEGORY` VARCHAR(255) NULL "
+                ); 
+        $aSql[] = array(
+                    "field"     => "JXNEXTAGCATEGORY",
+                    "statement" => "ALTER TABLE oxcategories ADD COLUMN `JXNEXTAGCATEGORY` VARCHAR(255) NULL "
                 ); 
                 
         try {

@@ -22,9 +22,9 @@
  *
  */
  
-class jxAmazonCategory extends oxAdminView
+class jxNextagCategory extends oxAdminView
 {
-    protected $_sThisTemplate = "jxamazoncategory.tpl";
+    protected $_sThisTemplate = "jxnextagcategory.tpl";
     protected $aCategories = array();
             
     public function render()
@@ -35,7 +35,7 @@ class jxAmazonCategory extends oxAdminView
         $this->jxSortCategoryList();
 
         $myConfig = oxRegistry::get( 'oxConfig' );
-        $this->_aViewData["categoryFile"] = $myConfig->getConfigParam( 'sJxTaxoAmazonCategoryLocation' );
+        $this->_aViewData["categoryFile"] = $myConfig->getConfigParam( 'sJxTaxoNextagCategoryLocation' );
         
         $oModule = oxNew('oxModule');
         $oModule->load('jxtaxo');
@@ -52,14 +52,14 @@ class jxAmazonCategory extends oxAdminView
     }
     
     
-    public function saveAmazonCategoryValues()
+    public function saveNextagCategoryValues()
     {
         $oDb = oxDb::getDb();
         $aCatIds = $this->getConfig()->getRequestParameter( 'jxtx_catid' ); 
         $aTaxoVals = $this->getConfig()->getRequestParameter( 'jxtx_taxoval' ); 
 
         foreach ($aTaxoVals as $key => $sTaxoValue) {
-            $sSql = "UPDATE oxcategories SET jxamazoncategory = '{$aTaxoVals[$key]}' WHERE oxid = '{$aCatIds[$key]}' ";
+            $sSql = "UPDATE oxcategories SET jxnextagcategory = '{$aTaxoVals[$key]}' WHERE oxid = '{$aCatIds[$key]}' ";
             $oDb->execute($sSql);
         }
         return;
@@ -83,7 +83,7 @@ class jxAmazonCategory extends oxAdminView
         
         $sSql = "SELECT c.oxid, c.oxtitle, c.oxactive, c.oxhidden, "
                     . "(SELECT COUNT(*) FROM oxobject2category o2c WHERE o2c.oxcatnid = c.oxid) AS artcount, "
-                    . "(SELECT COUNT(*) FROM oxcategories c1 WHERE c1.oxparentid=c.oxid) AS count, c.jxamazoncategory AS taxonomy "
+                    . "(SELECT COUNT(*) FROM oxcategories c1 WHERE c1.oxparentid=c.oxid) AS count, c.jxnextagcategory AS taxonomy "
                 . "FROM oxcategories c "
                 . "WHERE c.oxparentid = '$sParent' "
                     . $sWhere
