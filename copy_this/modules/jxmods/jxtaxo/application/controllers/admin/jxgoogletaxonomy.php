@@ -52,8 +52,8 @@ class jxGoogleTaxonomy extends oxAdminView
     public function saveGoogleTaxonomyValues()
     {
         $oDb = oxDb::getDb();
-        $aCatIds = $this->getConfig()->getRequestParameter( 'jxgt_catid' ); 
-        $aTaxoVals = $this->getConfig()->getRequestParameter( 'jxgt_taxoval' ); 
+        $aCatIds = $this->getConfig()->getRequestParameter( 'jxtx_catid' ); 
+        $aTaxoVals = $this->getConfig()->getRequestParameter( 'jxtx_taxoval' ); 
         foreach ($aTaxoVals as $key => $sTaxoValue) {
             $sSql = "UPDATE oxcategories SET jxgoogletaxonomy = '{$aTaxoVals[$key]}' WHERE oxid = '{$aCatIds[$key]}' ";
             $oDb->execute($sSql);
@@ -72,9 +72,9 @@ class jxGoogleTaxonomy extends oxAdminView
         }
         
         $sWhere = "";
-        if ( $myConfig->getConfigParam('sJxGTaxoDisplayInactive') == FALSE )
+        if ( $myConfig->getConfigParam('sJxTaxoDisplayInactive') == FALSE )
             $sWhere .= "AND c.oxactive = 1 ";
-        if ( $myConfig->getConfigParam('sJxGTaxoDisplayHidden') == FALSE )
+        if ( $myConfig->getConfigParam('sJxTaxoDisplayHidden') == FALSE )
             $sWhere .= "AND c.oxhidden = 0 ";
         
         $sSql = "SELECT c.oxid, c.oxtitle, c.oxactive, c.oxhidden, "
@@ -126,7 +126,7 @@ class jxGoogleTaxonomy extends oxAdminView
         $sModuleId = $oModule->getId();
         
         $myConfig = oxRegistry::get("oxConfig");
-        $sModulePath = $myConfig->getConfigParam('sShopDir') . 'modules/' . $oModule->getModulePath('jxgtaxo');
+        $sModulePath = $myConfig->getConfigParam('sShopDir') . 'modules/' . $oModule->getModulePath('jxtaxo');
         
         return $sModulePath;
     }

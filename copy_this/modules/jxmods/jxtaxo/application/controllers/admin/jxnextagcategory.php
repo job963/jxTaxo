@@ -76,9 +76,9 @@ class jxNextagCategory extends oxAdminView
         }
         
         $sWhere = "";
-        if ( $myConfig->getConfigParam('sJxGTaxoDisplayInactive') == FALSE )
+        if ( $myConfig->getConfigParam('sJxTaxoDisplayInactive') == FALSE )
             $sWhere .= "AND c.oxactive = 1 ";
-        if ( $myConfig->getConfigParam('sJxGTaxoDisplayHidden') == FALSE )
+        if ( $myConfig->getConfigParam('sJxTaxoDisplayHidden') == FALSE )
             $sWhere .= "AND c.oxhidden = 0 ";
         
         $sSql = "SELECT c.oxid, c.oxtitle, c.oxactive, c.oxhidden, "

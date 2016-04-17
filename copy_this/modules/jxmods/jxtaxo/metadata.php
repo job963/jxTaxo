@@ -12,30 +12,30 @@ $aModule = array(
     'id'           => 'jxtaxo',
     'title'        => 'jxTaxo - Product Taxonomy for Shopping Portals',
     'description'  => array(
-                        'de' => 'Definition der Taxonomie/Klassifizierung je Kategorie f&uuml;r Preissuchmaschinen wie Google Shopping oder Amazon Produktanzeigen',
-                        'en' => 'Define the Taxonomy/Classification of each Category for Shopping Portals like Google Shopping or Amazon Product Ads'
+                        'de' => 'Definition der Taxonomie/Klassifizierung je Kategorie f&uuml;r Preissuchmaschinen wie Google Shopping, Amazon Produktanzeigen oder NexTag/Guenstiger.de',
+                        'en' => 'Define the Taxonomy/Classification of each Category for Shopping Portals like Google Shopping, Amazon Product Ads or NexTag/Guenstiger.de'
                         ),
     'thumbnail'    => 'jxtaxo.png',
-    'version'      => '0.2',
+    'version'      => '0.3.1',
     'author'       => 'Joachim Barthel',
     'url'          => 'https://github.com/job963/jxTaxo',
     'email'        => 'jobarthel@gmail.com',
     'extend'       => array(
                         ),
     'files'        => array(
-        'jxtaxo_events'        => 'jxmods/jxtaxo/core/jxtaxo_events.php',
-        'jxamazoncategory'     => 'jxmods/jxtaxo/application/controllers/admin/jxamazoncategory.php',
-        'jxgoogletaxonomy'     => 'jxmods/jxtaxo/application/controllers/admin/jxgoogletaxonomy.php',
-        'jxnextagcategory'     => 'jxmods/jxtaxo/application/controllers/admin/jxnextagcategory.php'
+                        'jxtaxo_events'        => 'jxmods/jxtaxo/core/jxtaxo_events.php',
+                        'jxamazoncategory'     => 'jxmods/jxtaxo/application/controllers/admin/jxamazoncategory.php',
+                        'jxgoogletaxonomy'     => 'jxmods/jxtaxo/application/controllers/admin/jxgoogletaxonomy.php',
+                        'jxnextagcategory'     => 'jxmods/jxtaxo/application/controllers/admin/jxnextagcategory.php'
                             ),
     'templates'    => array(
-        'jxamazoncategory.tpl' => 'jxmods/jxtaxo/application/views/admin/tpl/jxamazoncategory.tpl',
-        'jxgoogletaxonomy.tpl' => 'jxmods/jxtaxo/application/views/admin/tpl/jxgoogletaxonomy.tpl',
-        'jxnextagcategory.tpl' => 'jxmods/jxtaxo/application/views/admin/tpl/jxnextagcategory.tpl'
+                        'jxamazoncategory.tpl' => 'jxmods/jxtaxo/application/views/admin/tpl/jxamazoncategory.tpl',
+                        'jxgoogletaxonomy.tpl' => 'jxmods/jxtaxo/application/views/admin/tpl/jxgoogletaxonomy.tpl',
+                        'jxnextagcategory.tpl' => 'jxmods/jxtaxo/application/views/admin/tpl/jxnextagcategory.tpl'
                             ),
     'events'       => array(
-        'onActivate'   => 'jxtaxo_events::onActivate', 
-        'onDeactivate' => 'jxtaxo_events::onDeactivate'
+                        'onActivate'   => 'jxtaxo_events::onActivate', 
+                        'onDeactivate' => 'jxtaxo_events::onDeactivate'
                         ),
     'settings'     => array(
                         array(

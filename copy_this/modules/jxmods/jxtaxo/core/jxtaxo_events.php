@@ -32,27 +32,30 @@ class jxTaxo_Events
 
         $aSql = array();
         $aSql[] = array(
+                    "table"     => "oxcategories",
                     "field"     => "JXGOOGLETAXONOMY",
                     "statement" => "ALTER TABLE oxcategories ADD COLUMN `JXGOOGLETAXONOMY` VARCHAR(255) NULL "
                 ); 
         $aSql[] = array(
+                    "table"     => "oxcategories",
                     "field"     => "JXAMAZONCATEGORY",
                     "statement" => "ALTER TABLE oxcategories ADD COLUMN `JXAMAZONCATEGORY` VARCHAR(255) NULL "
                 ); 
         $aSql[] = array(
+                    "table"     => "oxcategories",
                     "field"     => "JXNEXTAGCATEGORY",
                     "statement" => "ALTER TABLE oxcategories ADD COLUMN `JXNEXTAGCATEGORY` VARCHAR(255) NULL "
                 ); 
                 
         try {
             foreach ($aSql as $sSql) {
-                if ( !$oDb->getOne( "SHOW COLUMNS FROM oxcategories LIKE '{$sSql['field']}'", false, false ) ) {
+                if ( !$oDb->getOne( "SHOW COLUMNS FROM {$sSql['table']} LIKE '{$sSql['field']}'", false, false ) ) {
                     $oRs = $oDb->Execute($sSql['statement']);
                 }
             }
         }
         catch (Exception $e) {
-            fputs( $fh, date("Y-m-d H:i:s ").$e->getMessage() );
+            fputs( $fh, date("Y-m-d H:i:s ").'jxTaxo: '.$e->getMessage() );
             echo '<div style="border:2px solid #dd0000;margin:10px;padding:5px;background-color:#ffdddd;font-family:sans-serif;font-size:14px;">';
             echo '<b>SQL-Error '.$e->getCode().' in SQL statement</b><br />'.$e->getMessage().'';
             echo '</div>';

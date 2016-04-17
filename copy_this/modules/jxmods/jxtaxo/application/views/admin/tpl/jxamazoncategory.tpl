@@ -33,14 +33,14 @@
         
         <div class="jxgtaxo">
 
-            <form name="jxgtaxo" id="jxgtaxo" action="[{ $oViewConf->getSelfLink() }]" method="post">
+            <form name="jxtaxo" id="jxtaxo" action="[{ $oViewConf->getSelfLink() }]" method="post">
                 [{ $oViewConf->getHiddenSid() }]
                 <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
                 <input type="hidden" name="fnc" value="">
                 <input type="hidden" name="oxid" value="[{ $oxid }]">
                 
                 <input type="submit"
-                    onClick="document.forms['jxgtaxo'].elements['fnc'].value = 'saveAmazonCategoryValues';" 
+                    onClick="document.forms['jxtaxo'].elements['fnc'].value = 'saveAmazonCategoryValues';" 
                     value=" [{ oxmultilang ident="GENERAL_SAVE" }] " [{ $readonly }]>
 
                 <div style="text-align:right;margin-right:1%;float:right;">
@@ -93,7 +93,7 @@
                 </table>
                 </div>
                 <input type="submit"
-                    onClick="document.forms['jxgtaxo'].elements['fnc'].value = 'saveAmazonCategoryValues';" 
+                    onClick="document.forms['jxtaxo'].elements['fnc'].value = 'saveAmazonCategoryValues';" 
                     value=" [{ oxmultilang ident="GENERAL_SAVE" }] " [{ $readonly }]>
             </form>
         </div>
