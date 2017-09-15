@@ -18,7 +18,8 @@
  *
  * @link      https://github.com/job963/jxTaxo
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
- * @copyright (C) Joachim Barthel, 2014-2015
+ * @copyright (C) Joachim Barthel, 2014-2017
+ * @author    Joachim Barthel <jobarthel@gmail.com>
  *
  */
  
@@ -80,9 +81,15 @@ class jxNextagCategory extends oxAdminView
             $sWhere .= "AND c.oxactive = 1 ";
         if ( $myConfig->getConfigParam('sJxTaxoDisplayHidden') == FALSE )
             $sWhere .= "AND c.oxhidden = 0 ";
+        if ( $myConfig->getConfigParam('sJxTaxoCountAllProducts') == FALSE ) {
+            $sArtCount = "SELECT COUNT(*) FROM oxobject2category o2c, oxarticles a WHERE o2c.oxcatnid = c.oxid AND o2c.oxobjectid = a.oxid AND oxactive = 1";
+        } else {
+            $sArtCount = "SELECT COUNT(*) FROM oxobject2category o2c WHERE o2c.oxcatnid = c.oxid";
+        }
         
         $sSql = "SELECT c.oxid, c.oxtitle, c.oxactive, c.oxhidden, "
-                    . "(SELECT COUNT(*) FROM oxobject2category o2c WHERE o2c.oxcatnid = c.oxid) AS artcount, "
+                    //. "(SELECT COUNT(*) FROM oxobject2category o2c WHERE o2c.oxcatnid = c.oxid) AS artcount, "
+                    . "({$sArtCount}) AS artcount, "
                     . "(SELECT COUNT(*) FROM oxcategories c1 WHERE c1.oxparentid=c.oxid) AS count, c.jxnextagcategory AS taxonomy "
                 . "FROM oxcategories c "
                 . "WHERE c.oxparentid = '$sParent' "

@@ -8,6 +8,8 @@
             </SUBMENU>
             <SUBMENU id="jxntaxo_menu" cl="jxnextagcategory" rights="malladmin">
             </SUBMENU>
+            <SUBMENU id="jxtaxo_show_menu" cl="jxtaxoshowexport">
+            </SUBMENU>
         </MAINMENU>
     </OXMENU>
 </OX>
