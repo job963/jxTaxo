@@ -23,8 +23,12 @@ $aLang = array(
     'SHOP_MODULE_GROUP_JXTAXO_PROPOSALS'            => 'Proposals',
     'SHOP_MODULE_sJxTaxoAmazonCategoryLocation'     => 'Amazon Categories (path and filename)',
     'SHOP_MODULE_sJxTaxoNextagCategoryLocation'     => 'Nextag Categories (path and filename)',
+    'SHOP_MODULE_GROUP_JXTAXO_EXPORT'               => 'Exportfiles',
+    'SHOP_MODULE_sJxTaxoExportPath'                 => 'Pfath of exportfiles (relative to shop root)',
+    'SHOP_MODULE_aJxTaxoSystems'                    => 'List of Exportfiles (for each one line)<br/><br/>'
+                                                        . 'Format: <i>title</><b>/</b><i>filename</i><b>/</b><i>delimeter</i>',
     
-    'charset'                   => 'ISO-8859-15',
+    'charset'                   => 'UTF-8',
 );
 
 ?>
